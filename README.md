@@ -12,8 +12,8 @@
 
 ### Examples
 
-- Gallery View for Images
-- Manually Trigger Uploads & Edit File Names
+- Gallery View for Images [`http://localhost:8000/upload.html`]
+- Manually Trigger Uploads & Edit File Names [`http://localhost:8000/upload2.html`]
 
 ## Getting Started
 
