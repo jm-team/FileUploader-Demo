@@ -25,9 +25,9 @@ var express = require("express"),
 
     // paths/constants
     fileInputName = process.env.FILE_INPUT_NAME || "qqfile",
-    publicDir = process.env.PUBLIC_DIR || "static", // 客户端静态资源文件
-    nodeModulesDir = process.env.NODE_MODULES_DIR || "node_modules",
-    uploadedFilesPath = process.env.UPLOADED_FILES_DIR || "uploaded", // 上传文件夹
+    publicDir = process.env.PUBLIC_DIR, // 客户端静态资源文件
+    nodeModulesDir = process.env.NODE_MODULES_DIR,
+    uploadedFilesPath = process.env.UPLOADED_FILES_DIR, // 上传文件夹
     chunkDirName = "chunks",
     port = process.env.SERVER_PORT || 8000,
     maxFileSize = process.env.MAX_FILE_SIZE || 0; // in bytes, 0 for unlimited
@@ -178,7 +178,7 @@ function moveFile(destinationDir, sourceFile, destinationFile, success, failure)
 }
 
 function getUploadedUuidPath(uuid) {  
-    return uploadedFilesPath + "/" + uuid + "/";
+    return uploadedFilesPath + uuid + "/";
 }
 
 function moveUploadedFile(file, uuid, success, failure) {

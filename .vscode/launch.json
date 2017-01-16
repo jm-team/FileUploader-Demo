@@ -10,7 +10,12 @@
             "request": "launch",
             "name": "启动程序",
             "program": "${workspaceRoot}\\server.js",
-            "cwd": "${workspaceRoot}"
+            "cwd": "${workspaceRoot}",
+            "env": {
+                "PUBLIC_DIR": "${workspaceRoot}/static",
+                "NODE_MODULES_DIR": "${workspaceRoot}/node_modules/",
+                "UPLOADED_FILES_DIR": "${workspaceRoot}/uploaded/"
+            }
         },
         {
             "type": "node",
