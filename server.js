@@ -23,6 +23,8 @@ var express = require("express"),
     multiparty = require('multiparty'),
     app = express(),
 
+    path = require('path'),
+
     // paths/constants
     fileInputName = process.env.FILE_INPUT_NAME || "qqfile",
     publicDir = process.env.PUBLIC_DIR, // 客户端静态资源文件
@@ -41,6 +43,16 @@ app.use(express.static(publicDir));
 app.use("/node_modules", express.static(nodeModulesDir));
 app.post("/uploads", onUpload);
 app.delete("/uploads/:uuid", onDeleteFile);
+
+app.get('/demo1', function (req, res) {
+  res.sendFile(path.join(__dirname + '/static/demo1.html'));
+})
+
+app.get('/demo2', function (req, res) {
+  res.sendFile(path.join(__dirname + '/static/demo2.html'));
+})
+
+
 
 app.get('/', function (req, res) {
   res.send('Hello World!')

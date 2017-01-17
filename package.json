@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set PUBLIC_DIR=$(pwd)  NODE_MODULES_DIR=$(pwd)/node_modules/  UPLOADED_FILES_DIR=$(pwd)/uploads/ node server.js"
+    "start": "PUBLIC_DIR=$(pwd)/static  NODE_MODULES_DIR=$(pwd)/node_modules/  UPLOADED_FILES_DIR=$(pwd)/uploaded/ node server.js"
   },
   "author": "",
   "license": "ISC"
